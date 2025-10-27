@@ -12,6 +12,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 export default function Home() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const services = [
     {
       name: 'General Dentistry',
@@ -115,7 +119,7 @@ export default function Home() {
     {
       title: 'Dental Veneers',
       description: 'Complete smile transformation',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981a782dfe?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=300&fit=crop'
     },
     {
       title: 'Dental Implants',
@@ -151,10 +155,10 @@ export default function Home() {
                 We're committed to helping you achieve and maintain a healthy, beautiful smile for life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center">
+                <Link to="/contact" onClick={scrollToTop} className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center">
                   Book Appointment
                 </Link>
-                <Link to="/new-patients" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 text-center">
+                <Link to="/new-patients" onClick={scrollToTop} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 text-center">
                   New Patients
                 </Link>
               </div>
@@ -213,7 +217,7 @@ export default function Home() {
                 Whether you need a routine cleaning, cosmetic enhancement, or restorative treatment,
                 we're here to help you achieve optimal oral health in a relaxing, judgment-free environment.
               </p>
-              <Link to="/team" className="inline-block mt-6 text-primary-600 font-semibold hover:text-primary-700">
+              <Link to="/team" onClick={scrollToTop} className="inline-block mt-6 text-primary-600 font-semibold hover:text-primary-700">
                 Meet Our Team →
               </Link>
             </motion.div>
@@ -273,14 +277,14 @@ export default function Home() {
                 <service.icon className="h-12 w-12 text-primary-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.name}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link to={service.link} className="text-primary-600 font-semibold hover:text-primary-700">
+                <Link to={service.link} onClick={scrollToTop} className="text-primary-600 font-semibold hover:text-primary-700">
                   Learn More →
                 </Link>
               </motion.div>
             ))}
           </div>
           <div className="text-center">
-            <Link to="/services" className="btn-primary">
+            <Link to="/services" onClick={scrollToTop} className="btn-primary">
               View All Services
             </Link>
           </div>
@@ -326,7 +330,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/testimonials" className="btn-outline">
+            <Link to="/testimonials" onClick={scrollToTop} className="btn-outline">
               Read More Reviews
             </Link>
           </div>
@@ -369,7 +373,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/testimonials" className="btn-primary">
+            <Link to="/testimonials" onClick={scrollToTop} className="btn-primary">
               View Full Gallery
             </Link>
           </div>
@@ -401,7 +405,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">Don't see your provider? Contact us to verify coverage.</p>
-            <Link to="/new-patients" className="text-primary-600 font-semibold hover:text-primary-700">
+            <Link to="/new-patients" onClick={scrollToTop} className="text-primary-600 font-semibold hover:text-primary-700">
               Learn About Payment Options →
             </Link>
           </div>
@@ -464,10 +468,10 @@ export default function Home() {
               Schedule your appointment today and take the first step toward a healthier, more confident smile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact" onClick={scrollToTop} className="btn-primary">
                 Book Your Appointment
               </Link>
-              <Link to="/new-patients" className="btn-outline">
+              <Link to="/new-patients" onClick={scrollToTop} className="btn-outline">
                 New Patient Information
               </Link>
             </div>
