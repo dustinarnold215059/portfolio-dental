@@ -11,7 +11,7 @@ export default function Team() {
     {
       name: 'Dr. James Anderson',
       title: 'DDS - Lead Dentist',
-      photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
+      photo: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop',
       education: 'Doctor of Dental Surgery, University of Michigan School of Dentistry, 2005',
       specialties: ['Cosmetic Dentistry', 'Implant Dentistry', 'Full Mouth Reconstruction'],
       bio: 'Dr. Anderson founded Bright Smile Dental Care in 2012 with a vision to provide exceptional, personalized dental care. With over 18 years of experience, he specializes in cosmetic and restorative dentistry. Dr. Anderson is passionate about helping patients achieve their dream smiles through advanced techniques and compassionate care.',
