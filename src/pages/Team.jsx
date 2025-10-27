@@ -9,12 +9,12 @@ import {
 export default function Team() {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Smith',
+      name: 'Dr. James Anderson',
       title: 'DDS - Lead Dentist',
-      photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop',
+      photo: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop',
       education: 'Doctor of Dental Surgery, University of Michigan School of Dentistry, 2005',
       specialties: ['Cosmetic Dentistry', 'Implant Dentistry', 'Full Mouth Reconstruction'],
-      bio: 'Dr. Smith founded Bright Smile Dental Care in 2012 with a vision to provide exceptional, personalized dental care. With over 18 years of experience, she specializes in cosmetic and restorative dentistry. Dr. Smith is passionate about helping patients achieve their dream smiles through advanced techniques and compassionate care.',
+      bio: 'Dr. Anderson founded Bright Smile Dental Care in 2012 with a vision to provide exceptional, personalized dental care. With over 18 years of experience, he specializes in cosmetic and restorative dentistry. Dr. Anderson is passionate about helping patients achieve their dream smiles through advanced techniques and compassionate care.',
       certifications: ['American Dental Association', 'Academy of General Dentistry', 'American Academy of Cosmetic Dentistry'],
       languages: ['English', 'Spanish'],
     },
