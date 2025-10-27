@@ -9,6 +9,10 @@ import {
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const quickLinks = [
     { name: 'Services', href: '/services' },
     { name: 'Our Team', href: '/team' },
@@ -68,6 +72,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
+                    onClick={scrollToTop}
                     className="hover:text-primary-400 transition text-sm"
                   >
                     {link.name}
@@ -75,12 +80,12 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link to="/testimonials" className="hover:text-primary-400 transition text-sm">
+                <Link to="/testimonials" onClick={scrollToTop} className="hover:text-primary-400 transition text-sm">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-primary-400 transition text-sm">
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-primary-400 transition text-sm">
                   Contact
                 </Link>
               </li>
@@ -95,6 +100,7 @@ export default function Footer() {
                 <li key={service.name}>
                   <Link
                     to={service.href}
+                    onClick={scrollToTop}
                     className="hover:text-primary-400 transition text-sm"
                   >
                     {service.name}
@@ -129,11 +135,11 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p>&copy; {currentYear} Bright Smile Dental Care. All rights reserved.</p>
           <p className="mt-2">
-            <Link to="/contact" className="hover:text-primary-400 transition">Privacy Policy</Link>
+            <Link to="/contact" onClick={scrollToTop} className="hover:text-primary-400 transition">Privacy Policy</Link>
             {' | '}
-            <Link to="/contact" className="hover:text-primary-400 transition">Terms of Service</Link>
+            <Link to="/contact" onClick={scrollToTop} className="hover:text-primary-400 transition">Terms of Service</Link>
             {' | '}
-            <Link to="/contact" className="hover:text-primary-400 transition">Accessibility</Link>
+            <Link to="/contact" onClick={scrollToTop} className="hover:text-primary-400 transition">Accessibility</Link>
           </p>
           <p className="mt-4 text-gray-500">
             Emergency? Call us 24/7 at <a href="tel:7345559999" className="text-primary-400 hover:underline">(734) 555-9999</a>

@@ -19,6 +19,10 @@ export default function Header() {
 
   const isActive = (path) => location.pathname === path
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Bar */}
@@ -42,7 +46,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={scrollToTop} className="flex items-center">
             <div className="text-2xl font-bold text-primary-600">
               <span className="text-secondary-700">Bright Smile</span> Dental Care
             </div>
@@ -54,6 +58,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={scrollToTop}
                 className={`text-sm font-medium transition-colors relative group ${
                   isActive(item.href)
                     ? 'text-primary-600'
@@ -72,7 +77,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact" onClick={scrollToTop} className="btn-primary">
               Book Appointment
             </Link>
           </div>
@@ -106,7 +111,10 @@ export default function Header() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToTop()
+                    }}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-primary-50 text-primary-600'
@@ -119,7 +127,10 @@ export default function Header() {
                 <div className="px-3 pt-2">
                   <Link
                     to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToTop()
+                    }}
                     className="btn-primary w-full text-center block"
                   >
                     Book Appointment
