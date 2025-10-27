@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   BookOpenIcon,
@@ -11,6 +12,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 export default function Resources() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const resources = [
     {
       title: 'Pre-Operative Instructions',
@@ -522,9 +527,9 @@ export default function Resources() {
               Our team is here to help. Schedule a consultation or call us with your questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
+              <Link to="/contact" onClick={scrollToTop} className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
                 Schedule Consultation
-              </a>
+              </Link>
               <a href="tel:7345557645" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300">
                 Call (734) 555-SMILE
               </a>
