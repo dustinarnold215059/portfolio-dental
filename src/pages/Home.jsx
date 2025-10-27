@@ -199,7 +199,7 @@ export default function Home() {
               </h2>
               <div className="flex justify-center mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&sat=-100&con=10"
+                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=150&h=150&fit=crop"
                   alt="Dr. James Anderson"
                   className="w-32 h-32 rounded-full border-4 border-primary-600 shadow-lg"
                 />
