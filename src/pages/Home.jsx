@@ -78,7 +78,7 @@ export default function Home() {
     {
       name: 'Sarah Johnson',
       rating: 5,
-      text: 'Dr. Smith and her team are absolutely wonderful! They made my dental implant procedure comfortable and stress-free. Highly recommend!',
+      text: 'Dr. Anderson and his team are absolutely wonderful! They made my dental implant procedure comfortable and stress-free. Highly recommend!',
       date: '2 weeks ago'
     },
     {
@@ -107,10 +107,26 @@ export default function Home() {
   ]
 
   const beforeAfter = [
-    { title: 'Teeth Whitening', description: 'Professional whitening treatment' },
-    { title: 'Dental Veneers', description: 'Complete smile transformation' },
-    { title: 'Dental Implants', description: 'Permanent tooth replacement' },
-    { title: 'Invisalign', description: 'Clear aligner treatment' },
+    {
+      title: 'Teeth Whitening',
+      description: 'Professional whitening treatment',
+      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop'
+    },
+    {
+      title: 'Dental Veneers',
+      description: 'Complete smile transformation',
+      image: 'https://images.unsplash.com/photo-1609840114035-3c981a782dfe?w=400&h=300&fit=crop'
+    },
+    {
+      title: 'Dental Implants',
+      description: 'Permanent tooth replacement',
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&h=300&fit=crop'
+    },
+    {
+      title: 'Invisalign',
+      description: 'Clear aligner treatment',
+      image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop'
+    },
   ]
 
   return (
@@ -183,13 +199,13 @@ export default function Home() {
               </h2>
               <div className="flex justify-center mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop"
-                  alt="Dr. Sarah Smith"
+                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=150&h=150&fit=crop"
+                  alt="Dr. James Anderson"
                   className="w-32 h-32 rounded-full border-4 border-primary-600 shadow-lg"
                 />
               </div>
               <p className="text-lg text-gray-700 mb-4">
-                <span className="font-semibold text-primary-600">Dr. Sarah Smith, DDS</span> and our dedicated team
+                <span className="font-semibold text-primary-600">Dr. James Anderson, DDS</span> and our dedicated team
                 have been serving the Troy community since 2012. We believe in providing personalized,
                 compassionate care that puts our patients first.
               </p>
@@ -338,7 +354,7 @@ export default function Home() {
               >
                 <div className="relative h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=300&fit=crop"
+                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
