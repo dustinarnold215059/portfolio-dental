@@ -12,6 +12,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 export default function Services() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const serviceCategories = [
     {
       category: 'General Dentistry',
@@ -295,7 +299,7 @@ export default function Services() {
               Schedule a consultation to discuss which services are right for you
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+              <Link to="/contact" onClick={scrollToTop} className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
                 Book Appointment
               </Link>
               <a href="tel:7345557645" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">

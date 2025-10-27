@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import { HomeIcon } from '@heroicons/react/24/outline';
 
 function NotFound() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-white to-cyan-50 px-4">
       <motion.div
@@ -33,6 +37,7 @@ function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
+            onClick={scrollToTop}
             className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
           >
             <HomeIcon className="w-5 h-5 mr-2" />
@@ -41,6 +46,7 @@ function NotFound() {
 
           <Link
             to="/contact"
+            onClick={scrollToTop}
             className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-50 text-teal-600 font-semibold rounded-lg border-2 border-teal-600 transition-all duration-300"
           >
             Book Appointment
@@ -52,13 +58,13 @@ function NotFound() {
             Quick Links
           </p>
           <div className="flex flex-wrap gap-4 justify-center text-sm">
-            <Link to="/services" className="text-teal-600 hover:underline">Services</Link>
+            <Link to="/services" onClick={scrollToTop} className="text-teal-600 hover:underline">Services</Link>
             <span className="text-gray-300">|</span>
-            <Link to="/team" className="text-teal-600 hover:underline">Our Team</Link>
+            <Link to="/team" onClick={scrollToTop} className="text-teal-600 hover:underline">Our Team</Link>
             <span className="text-gray-300">|</span>
-            <Link to="/new-patients" className="text-teal-600 hover:underline">New Patients</Link>
+            <Link to="/new-patients" onClick={scrollToTop} className="text-teal-600 hover:underline">New Patients</Link>
             <span className="text-gray-300">|</span>
-            <Link to="/contact" className="text-teal-600 hover:underline">Contact</Link>
+            <Link to="/contact" onClick={scrollToTop} className="text-teal-600 hover:underline">Contact</Link>
           </div>
         </div>
       </motion.div>

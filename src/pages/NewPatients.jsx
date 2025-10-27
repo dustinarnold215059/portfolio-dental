@@ -12,6 +12,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 export default function NewPatients() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -575,7 +579,7 @@ export default function NewPatients() {
               >
                 Call (734) 555-SMILE
               </a>
-              <Link to="/contact" className="btn-outline">
+              <Link to="/contact" onClick={scrollToTop} className="btn-outline">
                 Contact Us
               </Link>
             </div>
