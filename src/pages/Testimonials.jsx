@@ -116,7 +116,7 @@ export default function Testimonials() {
       title: 'Crown and Bridge Work',
       description: 'Restorative dentistry',
       category: 'Restorative',
-      image: 'https://images.unsplash.com/photo-1643321611300-febcd3751597?w=600&h=400&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop&q=80'
     },
   ]
 
