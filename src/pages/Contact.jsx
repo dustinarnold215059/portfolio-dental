@@ -25,6 +25,7 @@ export default function Contact() {
 
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const validateForm = () => {
     const newErrors = {}
@@ -56,22 +57,29 @@ export default function Contact() {
     const newErrors = validateForm()
 
     if (Object.keys(newErrors).length === 0) {
-      setSubmitted(true)
+      setIsSubmitting(true)
       setErrors({})
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        preferredDate: '',
-        preferredTime: '',
-        reasonForVisit: '',
-        insuranceProvider: '',
-        patientType: 'new',
-        additionalNotes: '',
-      })
-      setTimeout(() => setSubmitted(false), 8000)
+
+      // Simulate API call
+      setTimeout(() => {
+        setSubmitted(true)
+        setIsSubmitting(false)
+
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          preferredDate: '',
+          preferredTime: '',
+          reasonForVisit: '',
+          insuranceProvider: '',
+          patientType: 'new',
+          additionalNotes: '',
+        })
+        setTimeout(() => setSubmitted(false), 8000)
+      }, 1000)
     } else {
       setErrors(newErrors)
     }
@@ -473,9 +481,21 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full btn-primary py-4 text-lg"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 text-lg transition-all duration-300 ${
+                    isSubmitting
+                      ? 'bg-gray-400 cursor-not-allowed rounded-lg text-white font-semibold'
+                      : 'btn-primary'
+                  }`}
                 >
-                  Request Appointment
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3"></div>
+                      Submitting...
+                    </div>
+                  ) : (
+                    'Request Appointment'
+                  )}
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
