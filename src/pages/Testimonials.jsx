@@ -86,31 +86,37 @@ export default function Testimonials() {
       title: 'Complete Smile Makeover',
       description: 'Veneers and teeth whitening',
       category: 'Cosmetic',
+      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Dental Implant Restoration',
       description: 'Full arch implant replacement',
       category: 'Restorative',
+      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Professional Teeth Whitening',
       description: '8 shades whiter in one visit',
       category: 'Cosmetic',
+      image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Invisalign Treatment',
       description: '14-month clear aligner treatment',
       category: 'Orthodontic',
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Porcelain Veneers',
       description: 'Natural-looking smile enhancement',
       category: 'Cosmetic',
+      image: 'https://images.unsplash.com/photo-1609758174888-03268e358a75?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Crown and Bridge Work',
       description: 'Restorative dentistry',
       category: 'Restorative',
+      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&h=400&fit=crop&q=80'
     },
   ]
 
@@ -246,7 +252,7 @@ export default function Testimonials() {
               >
                 <div className="relative h-64 bg-gradient-to-br from-primary-100 to-secondary-100">
                   <img
-                    src={`https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop&q=80`}
+                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
