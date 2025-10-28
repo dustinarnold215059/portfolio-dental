@@ -110,13 +110,13 @@ export default function Testimonials() {
       title: 'Porcelain Veneers',
       description: 'Natural-looking smile enhancement',
       category: 'Cosmetic',
-      image: 'https://images.unsplash.com/photo-1609758174888-03268e358a75?w=600&h=400&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=600&h=400&fit=crop&q=80'
     },
     {
       title: 'Crown and Bridge Work',
       description: 'Restorative dentistry',
       category: 'Restorative',
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&h=400&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1643321611300-febcd3751597?w=600&h=400&fit=crop&q=80'
     },
   ]
 
