@@ -246,7 +246,7 @@ export default function Testimonials() {
               >
                 <div className="relative h-64 bg-gradient-to-br from-primary-100 to-secondary-100">
                   <img
-                    src={`https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop&q=80`}
+                    src={`https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop&q=80`}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />

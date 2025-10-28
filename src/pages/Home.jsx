@@ -119,7 +119,7 @@ export default function Home() {
     {
       title: 'Dental Veneers',
       description: 'Complete smile transformation',
-      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop'
     },
     {
       title: 'Dental Implants',
@@ -177,7 +177,7 @@ export default function Home() {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <img
-                  src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop"
+                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop"
                   alt="Modern dental office with comfortable patient chair"
                   className="rounded-xl shadow-2xl w-full"
                 />
